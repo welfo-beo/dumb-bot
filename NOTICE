@@ -1,0 +1,33 @@
+Third-Party Notices
+====================
+
+This notice covers third-party software and skill content included by this repository as of 2026-10-13. The complete locked dependency inventory, including transitive, optional, and development/test packages, is recorded in docs/sbom.spdx.json. The production-only dependency inventory is in docs/sbom.runtime.spdx.json. Both are SPDX 2.3 documents generated from package-lock.json with npm 11.17.0.
+
+Direct runtime dependencies
+---------------------------
+
+- @earendil-works/pi-coding-agent 1.2.0 — MIT. Package: https://www.npmjs.com/package/@earendil-works/pi-coding-agent/v/1.2.0. Source repository: https://github.com/earendil-works/pi.
+- typebox 1.3.27 — MIT. Package: https://www.npmjs.com/package/typebox/v/1.3.27. This is directly declared because src/extensions/hindsight/extension.ts imports it.
+
+Direct development and test dependencies
+----------------------------------------
+
+- @types/node 26.6.5 — MIT.
+- tsx 4.23.15 — MIT.
+- typescript 7.0.2 — Apache-2.0.
+- vitest 5.0.4 — MIT.
+
+The full locked dependency tree, declared SPDX license identifiers, package URLs, and integrity checksums are listed in the SBOM files. The project does not vendor the Pi or Hindsight source repositories. The Hindsight adapter uses a locally implemented REST transport against Hindsight's documented API; it does not bundle the Hindsight SDK.
+
+Third-party skill content
+-------------------------
+
+- src/skills/i-have-adhd/SKILL.md is copied verbatim from https://github.com/ayghri/i-have-adhd/blob/1ecea1993b7fce257ffbd686c070948b5e07eda6/skills/i-have-adhd/SKILL.md (commit 1ecea1993b7fce257ffbd686c070948b5e07eda6, 2026-10-11). Its SHA-256 is 88955c019bbb1419ff4b49dbb1f80a867467de6233d7865af2e06a7d7b76c7d3; the local file is byte-for-byte identical to the upstream file at that commit.
+- The upstream repository ayghri/i-have-adhd declares MIT and its LICENSE names Copyright (c) 2026 Ayoub Ghriss. The original upstream license text is preserved at src/skills/i-have-adhd/LICENSE. The skill is unmodified; its copyright attribution remains with the upstream author.
+
+Project license
+---------------
+
+The root LICENSE and root package.json declare MIT for dumb-bot, with Copyright (c) 2026 Hazim, as confirmed by the project owner. This project-level attribution does not replace the separate upstream copyright and MIT license applicable to src/skills/i-have-adhd/SKILL.md. Consult the adjacent skill LICENSE and the fixed upstream source above when redistributing that skill.
+
+The Hindsight API documentation or service license is not a license for this project's adapter implementation. This notice does not replace the complete license texts for dependencies; consult the corresponding package distributions when redistributing installed dependency files.

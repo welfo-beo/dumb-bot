@@ -1,0 +1,19 @@
+{
+  "name": "@dumb-bot/security",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal workspace policy, approval gates, and safe audit events for dumb-bot.",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

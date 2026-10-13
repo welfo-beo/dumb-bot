@@ -1,0 +1,19 @@
+{
+  "name": "@dumb-bot/memory-hindsight",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Project-scoped Hindsight memory adapter for dumb-bot.",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
